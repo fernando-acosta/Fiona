@@ -15,7 +15,7 @@ import numpy as np
 from datetime import datetime
 
 # Get Date
-now = datetime.now()
+now = str(datetime.now())
 
 DRIVER_PATH = '/Users/fernandoacosta-perez/Downloads/edgedriver_mac64/msedgedriver'
 driver = webdriver.Edge(executable_path=DRIVER_PATH)
