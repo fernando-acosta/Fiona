@@ -5,8 +5,12 @@ Fiona is a computer program that scrapes outages data from the Luma Energy power
 The Fiona computer program will enable us to construct a dataset to answer questions like: how long it will take to bring back up the power grid? What regions take more time to connect? The dataset will be constructed by running the script on a recurring basis. For now, the run will be performed manually, but eventually a server could be used to run the script automatically. 
 
 ## Data source
+### Luma Energy Website
 This the webpage being scraped: https://miluma.lumapr.com/outages/clientsWithoutService. It presents real time data on the effect of power outages in the different regions of Puerto Rico. See the following example:
 
 <p align="center">
 <img src="https://github.com/fernando-acosta/Fiona/blob/b43114aec5037c1cba61c27e64d3c81c2faa3af0/Pictures/luma.png"/>
 </p>
+
+### Power Outages USA Website
+Due to the recent event, Luma Energy stopped reporting detailed information about the outage. However, Power Outages USA developed an estimating procedure estimating based on the available information. We will use this information until Luma starts reporting accurate data again. This is the webpage that it is being scrapped: https://poweroutage.us/area/state/puerto%20rico.
