@@ -13,4 +13,4 @@ This the webpage being scraped: https://miluma.lumapr.com/outages/clientsWithout
 </p>
 
 ### Power Outages USA Website
-Due to the recent event, Luma Energy stopped reporting detailed information about the outage. However, Power Outages USA developed an estimating procedure estimating based on the available information. We will use this information until Luma starts reporting accurate data again. This is the webpage that it is being scrapped: https://poweroutage.us/area/state/puerto%20rico.
+Due to the recent event, Luma Energy stopped reporting detailed information about the outage. However, Power Outages USA developed an estimating procedure based on the available information. We will use this information until Luma starts reporting accurate data again. This is the webpage that it is being scrapped: https://poweroutage.us/area/state/puerto%20rico.
