@@ -6,9 +6,7 @@ Dynamic Scraping of LUMA Webage: Clients Without Service
 @author: fernandoacosta-perez
 """
 
-from itertools import product
 import pandas as pd
-from requests_html import HTMLSession
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import numpy as np

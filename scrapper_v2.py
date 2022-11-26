@@ -6,7 +6,6 @@ Dynamic Scraping of Power Outage Webage: Clients Without Service
 @author: fernandoacosta-perez
 """
 
-from re import L
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
