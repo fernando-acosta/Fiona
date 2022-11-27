@@ -28,8 +28,8 @@ create table source_region_mappings (
         constraint source_region_mapping_region_region_id_fk
             references regions
             on delete cascade,
-    source_specific_region_id varchar(20) not null
-        constraint source_id_region_id_composite_key primary key (source_id, region_id)
+    source_specific_region_id varchar(20) not null,
+    primary key (source_id, region_id)
 );
 
 -- How many people are without power, per region, identify source, when source was updated last, and when data was fetched.
