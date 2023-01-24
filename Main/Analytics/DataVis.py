@@ -49,22 +49,22 @@ class visualize:
         
         # Filter data based on the selected dates
         if regions != None:
-            self.data=self.data[self.data['Region'].isin(regions)].copy()
+            self.data=self.data[self.data['region_id'].isin(regions)].copy()
         
         if start_date != None:
-            self.data=self.data[self.data['Datetime']>=start_date]
+            self.data=self.data[self.data['data_fetched_on']>=start_date]
         
         if end_date != None:
             self.data=self.data[self.data['Datetime']<=end_date]
             
         # Add calculated field
-        self.data['Porcentaje de Recuperacion']= (1-self.data['Clientes sin Servicio']/self.data['Total de Clientes'])
-        self.data['Datetime'] = pd.to_datetime(self.data['Datetime'])
-        
+        self.data['Porcentaje de Recuperacion']= (1-self.data['clients_without_power_service']/self.data['total_clients'])
+        self.data['data_fetched_on'] = pd.to_datetime(self.data['data_fetched_on'])
+        self.data= self.data.sort_values(by= 'data_fetched_on')
         
         # Make plot
         plt.Figure()
-        fig= px.line(self.data, x= 'Datetime', y= 'Porcentaje de Recuperacion', color= 'Region', labels= {'Datetime': ''})
+        fig= px.line(self.data, x= 'data_fetched_on', y= 'Porcentaje de Recuperacion', color= 'region_id', labels= {'data_fetched_on': ''})
         plt.show()
         plt.close()
         
@@ -99,24 +99,24 @@ class visualize:
         
         # Filter data based on the selected dates
         if regions != None:
-            self.data=self.data[self.data['Region'].isin(regions)].copy()
+            self.data=self.data[self.data['region_id'].isin(regions)].copy()
         
         if start_date != None:
-            self.data=self.data[self.data['Datetime']>=start_date]
+            self.data=self.data[self.data['data_fetched_on']>=start_date]
         
         if end_date != None:
-            self.data=self.data[self.data['Datetime']<=end_date]
+            self.data=self.data[self.data['data_fetched_on']<=end_date]
             
         # Add Calculated field
-        self.data['Porcentaje de Recuperacion']= (1-self.data['Clientes sin Servicio']/self.data['Total de Clientes'])
-        self.data['Datetime'] = pd.to_datetime(self.data['Datetime'])
+        self.data['Porcentaje de Recuperacion']= (1-self.data['clients_without_power_service']/self.data['total_clients'])
+        self.data['data_fetched_on'] = pd.to_datetime(self.data['data_fetched_on'])
         self.data['Significant Outage']= (self.data['Porcentaje de Recuperacion'] <= 0.95)
         
         # Grouped Data
-        grouped_data= self.data[['Region', 'Significant Outage']].groupby(by= ['Region'], as_index=False).sum()
+        grouped_data= self.data[['region_id', 'Significant Outage']].groupby(by= ['region_id'], as_index=False).sum()
         grouped_data= grouped_data.sort_values(by= 'Significant Outage', ascending= False)
         # Plot Bar
-        fig= px.bar(grouped_data, x= 'Region', y= 'Significant Outage')
+        fig= px.bar(grouped_data, x= 'region_id', y= 'Significant Outage')
         
         return fig
             
@@ -142,32 +142,36 @@ class visualize:
         
         # Filter data based on the selected dates
         if regions != None:
-            self.data=self.data[self.data['Region'].isin(regions)].copy()
+            self.data=self.data[self.data['region_id'].isin(regions)].copy()
         
         if start_date != None:
-            self.data=self.data[self.data['Datetime']>=start_date]
+            self.data=self.data[self.data['data_fetched_on']>=start_date]
         
         if end_date != None:
-            self.data=self.data[self.data['Datetime']<=end_date]
+            self.data=self.data[self.data['data_fetched_on']<=end_date]
             
         # Add Calculated field
-        self.data['Porcentaje de Recuperacion']= (1-self.data['Clientes sin Servicio']/self.data['Total de Clientes'])
-        self.data['Datetime'] = pd.to_datetime(self.data['Datetime'])
+        self.data['Porcentaje de Recuperacion']= (1-self.data['clients_without_power_service']/self.data['total_clients'])
+        self.data['data_fetched_on'] = pd.to_datetime(self.data['data_fetched_on'])
         self.data['Significant Outage']= (self.data['Porcentaje de Recuperacion'] <= 0.95)
         
         # Grouped Data
-        grouped_data= self.data[['Region', 'Porcentaje de Recuperacion']].groupby(by= ['Region'], as_index=False).mean()
+        grouped_data= self.data[['region_id', 'Porcentaje de Recuperacion']].groupby(by= ['region_id'], as_index=False).mean()
         grouped_data= grouped_data.sort_values(by= 'Porcentaje de Recuperacion', ascending= False)
         
         # Plot Bar
-        fig= px.bar(grouped_data, x= 'Region', y= 'Porcentaje de Recuperacion')
+        fig= px.bar(grouped_data, x= 'region_id', y= 'Porcentaje de Recuperacion')
         
         return fig
     
 # Read Data
-data= pd.read_csv('FionaData/no_service_data.csv')
+data= pd.read_csv('outage_data.csv')
 
 # Test the class
 chart= visualize(data)
 chart.HistClientsWithoutService()
+chart.SignificantOutages()
+chart.MeanClientsNoService()
+
+
 
