@@ -1,0 +1,87 @@
+Feature Label,Description,Category
+improper_mask_base,Proportion of members  wearing a mask imporperly at baseline,Baseline Surveilance
+proper_improper_mask_base,Proportion of members wearing a mask either properly or imporperly,Baseline Surveilance
+proper_mask_base,Proportion of members properly wearing a mask at baseline,Baseline Surveilance
+avg_age,Average age in the union,Demographic
+hh_size,Average  household size at the union,Demographic
+med_age,Median Age in the union,Demographic
+member_count,Number of members in the union,Demographic
+n_female,Number of female members in the union,Demographic
+n_hh,Number of households included in the union,Demographic
+prop_female,Proportion of female members in the union,Demographic
+prop_resp_ill_base_1,Proportion of memebrs with type 1 respiratory disease at baseline,Epidemiological
+prop_resp_ill_base_2,Proportion of memebrs with type 2 respiratory disease at baseline,Epidemiological
+soc_dist_base,Social distancing at baseline,Epidemiological
+altruism_hh_altruism,If there was altruistic talks at the union,Experimental
+commit_hh_commitment,If there was verbal commitment of the members of the union,Experimental
+incentive_certificate,Whether memebers of the union were given a certificate,Experimental
+incentive_monetary,Whether members of the union received a monetary incentive,Experimental
+mask_treat_color_blue,Mask color dummy,Experimental
+mask_treat_color_green,Mask color dummy,Experimental
+mask_treat_color_purple,Mask color dummy,Experimental
+mask_treat_color_red,Mask color dummy,Experimental
+signage_signage,Whether memebers of the union signed an agreement to wear masks,Experimental
+surgical_cloth,If the union was given cloth mask,Experimental
+surgical_surgical,If the union was given surgical mask,Experimental
+text,Degree of text message at union level,Experimental
+text_hh,Degree of text message at union level,Experimental
+text_hh_ind_Household-Level Text Randomization,If there was houshold level text randomization,Experimental
+text_hh_ind_Village-Level Text Randomization,If there was village level text randomization,Experimental
+text_village,Degree of text message at union level,Experimental
+treatment_Intervention,Whether the union was treated or not,Experimental
+district_Brahamanbaria,District identifier dummy variable,Geographical
+district_Chittagong,District identifier dummy variable,Geographical
+district_Chuadanga,District identifier dummy variable,Geographical
+district_Comilla,District identifier dummy variable,Geographical
+district_Cox's Bazar,District identifier dummy variable,Geographical
+district_Dhaka,District identifier dummy variable,Geographical
+district_Dinajpur,District identifier dummy variable,Geographical
+district_Faridpur,District identifier dummy variable,Geographical
+district_Gaibandha,District identifier dummy variable,Geographical
+district_Gopalganj,District identifier dummy variable,Geographical
+district_Habiganj,District identifier dummy variable,Geographical
+district_Jessore,District identifier dummy variable,Geographical
+district_Jhenaidah,District identifier dummy variable,Geographical
+district_Joypurhat,District identifier dummy variable,Geographical
+district_Kurigram,District identifier dummy variable,Geographical
+district_Kushtia,District identifier dummy variable,Geographical
+district_Magura,District identifier dummy variable,Geographical
+district_Manikganj,District identifier dummy variable,Geographical
+district_Maulvibazar,District identifier dummy variable,Geographical
+district_Mymensingh,District identifier dummy variable,Geographical
+district_Naogaon,District identifier dummy variable,Geographical
+district_Narail,District identifier dummy variable,Geographical
+district_Narsingdi,District identifier dummy variable,Geographical
+district_Nawabganj,District identifier dummy variable,Geographical
+district_Panchagarh,District identifier dummy variable,Geographical
+district_Rajbari,District identifier dummy variable,Geographical
+district_Rajshahi,District identifier dummy variable,Geographical
+district_Rangpur,District identifier dummy variable,Geographical
+district_Satkhira,District identifier dummy variable,Geographical
+district_Sirajganj,District identifier dummy variable,Geographical
+district_Tangail,District identifier dummy variable,Geographical
+district_Thakurgaon,District identifier dummy variable,Geographical
+site_name_Main road to enter the village (observe mask people in rickshaws and or other ga,Name of the site that the interventions were taken,Geographical
+site_name_Market (when market is open),Name of the site that the interventions were taken,Geographical
+site_name_Mosque (at prayer time),Name of the site that the interventions were taken,Geographical
+site_name_Outside the door of the restaurant (observing people as they enter the restauran,Name of the site that the interventions were taken,Geographical
+soc_dist_prop moving avg,Lag for social distance proportion,Lag
+improper_mask_prop moving avg,Lag variable for improper mask wearing,Lag
+proper_improper_mask_prop moving avg,Lag variable for proper and imporper mask wearing,Lag
+proper_mask_prop moving avg,Lag variable for imporper mask wearing,Lag
+day,Day of the month that the measures were taken,Temporal
+Month,Month that the observation was taken,Temporal
+week day_Friday,Dummy denoting if the observations were taken Friday,Temporal
+week day_Monday,Dummy denoting if the observations were taken Monday,Temporal
+week day_Saturday,Dummy denoting if the observations were taken Saturday,Temporal
+week day_Thursday,Dummy denoting if the observations were taken Thursday,Temporal
+week day_Tuesday,Dummy denoting if the observations were taken Tuesday,Temporal
+week day_Wendnesday,Dummy denoting if the observations were taken Wednesday,Temporal
+week_gen_Follow-up 1,Dummy denoting the week of the ongoing intervention,Temporal
+week_gen_Week 1,Dummy denoting the week of the ongoing intervention,Temporal
+week_gen_Week 10,Dummy denoting the week of the ongoing intervention,Temporal
+week_gen_Week 2,Dummy denoting the week of the ongoing intervention,Temporal
+week_gen_Week 4,Dummy denoting the week of the ongoing intervention,Temporal
+week_gen_Week 6,Dummy denoting the week of the ongoing intervention,Temporal
+week_gen_Week 8,Dummy denoting the week of the ongoing intervention,Temporal
+year,Dummy denoting the week of the ongoing intervention,Temporal
